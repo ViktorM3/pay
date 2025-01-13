@@ -9,7 +9,7 @@ paypalrestsdk.configure({
     "client_secret": "EEscM1fDUfjo9KyhAnx1qkAtB1guf3-BvOxoCSCzz2fHM70uI4VDwwyd6XhQJBkKe5tFiDSaoP0tth6s"  # Sustituye con tu Client Secret
 })
 
-# Habilitar los logs para depuración
+
 logging.basicConfig(level=logging.INFO)
 
 class PuntoDeVenta:
@@ -48,7 +48,7 @@ class PuntoDeVenta:
                 "description": "Compra de ejemplo en Punto de Venta"
             }],
             "redirect_urls": {
-                "return_url": "http://localhost:8080",  # Cambiar por la URL de retorno en tu aplicación
+                "return_url": "http://localhost:8080",  # Cambiar por la URL de retorno en la aplicación 
                 "cancel_url": "http://localhost:8080"   # URL en caso de cancelación
             }
         })
@@ -95,15 +95,15 @@ class PuntoDeVenta:
         self.total_compra = 0.0  # Restablecer la compra para nueva venta
 
 
-# Crear una instancia de PuntoDeVenta
+
 punto_de_venta = PuntoDeVenta()
 
-# Simulación de agregar productos
+
 punto_de_venta.agregar_producto("Café", 15.50, 2)
 punto_de_venta.agregar_producto("Pan", 12.00, 1)
 punto_de_venta.mostrar_total()
 
-# Simulación de pago
+
 punto_de_venta.procesar_pago()
 
 # Finalizar la venta
